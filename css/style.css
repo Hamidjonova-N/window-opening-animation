@@ -1,0 +1,81 @@
+/* GLOBAL STYLES */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* CONTAINER */
+
+.container {
+  width: 100%;
+  max-width: 1550px;
+  height: 100vh;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: bisque;
+  background-image: url("https://static.vecteezy.com/system/resources/thumbnails/007/995/476/small/brick-wall-background-seamless-texture-pattern-illustration-free-vector.jpg");
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 500px;
+  height: 500px;
+  background-color: burlywood;
+  background-image: url("https://cdna.artstation.com/p/assets/images/images/024/119/298/large/levon-a-interier-cartoon77.jpg?1581375720");
+  background-repeat: no-repeat;
+  background-size: 900px;
+  background-position: center;
+  border: 20px ridge rgb(134, 67, 21);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper > section {
+  width: 280px;
+  height: 460px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 20px ridge rgb(134, 67, 21);
+  transition: transform 2s ease;
+}
+
+.left-section {
+  transform-origin: left center;
+}
+
+.right-section {
+  transform-origin: right center;
+}
+
+.wrapper:hover .left-section {
+  transform: perspective(2000px) rotateY(-150deg);
+}
+
+.wrapper:hover .right-section {
+  transform: perspective(2000px) rotateY(150deg);
+}
